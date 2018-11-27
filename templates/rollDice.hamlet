@@ -1,0 +1,30 @@
+<!-- Roll Dice Form
+    ================================================== -->
+<div .bs-docs-section>
+    <div .row>
+        <div .col-lg-12>
+            <div .page-header>
+                <h1 #rolled>Roll Dice
+
+    <div .row>
+        <div .col-lg-6>
+            <div .bs-callout bs-callout-info well>
+                <form .form-horizontal method=post action=@{RollDiceR}#roll >
+                    ^{formWidget}
+
+                    <button .btn.btn-primary type="submit">
+                        Roll it!
+
+
+        <div .col-lg-4.col-lg-offset-1>
+            <div .bs-callout.bs-callout-info.upload-response>
+
+                $maybe (RollForm num gen) <- submission
+                    You rolled a: <em>#{num}</em>
+                    <br>
+                    Your new generator is: <em>#{gen}</em>
+
+                $nothing
+                    Your roll awaits...
+
+<hr>
